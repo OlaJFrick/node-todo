@@ -1,4 +1,4 @@
-# H2 node-todo
+#H2 node-todo
 A simple node.js todo list (create, remove, list) using fs &amp; yargs.
 
 
@@ -7,7 +7,7 @@ node app.js --help
 
 > create a todo item
 
-node app.js create -todo="Remember to call Frank tonight"
+node app.js create -todo="Remember to call Mrs Smartypants tonight"
 
 > remove an existing todo item
 
