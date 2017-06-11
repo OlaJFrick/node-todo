@@ -7,12 +7,12 @@ node app.js --help
 
 > create a todo item
 
-node app.js create -item="Take out the trash"
+node app.js create -todo="Remember to call Frank tonight"
 
-> remove an existing item
+> remove an existing todo item
 
-node app.js remove -item="name of the item you want removed"
+node app.js remove -todo="name of the item you want removed"
 
-> list all todo items
+> list all current todo items
 
 node app.js list

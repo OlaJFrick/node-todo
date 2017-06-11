@@ -13,22 +13,34 @@ let saveTasks = (tasks) => {
 
 createTask = (item) => {
   let tasks = getTasks();
-  let newTask = item.toUpperCase().charAt(0) + item.slice(1);
-  let duplicateCheck = tasks.filter((task) => task === newTask);
-
-  if (duplicateCheck.length === 0) {
-    tasks.push(newTask);
-    saveTasks(tasks);
-    return newTask;
+  if (tasks === undefined) {
+    saveTasks([]);
+    createTask(item);
+  } else {
+    let tasks = getTasks();
+    let newTask = item.toUpperCase().charAt(0) + item.slice(1);
+    let duplicateCheck = tasks.filter((task) => task === newTask);
+    if (duplicateCheck.length === 0) {
+      tasks.push(newTask);
+      saveTasks(tasks);
+      return newTask;
+    }
   }
 }
 
 removeTask = (item) => {
-  console.log(item, 'is removed');
+  let allTasks = getTasks();
+  let filterOutTasks = allTasks.filter((task) => task !== item);
+  saveTasks(filterOutTasks);
+  return allTasks.length !== filterOutTasks.length;
 }
 
 listTasks = () => {
-  console.log(item);
+  let listTasks = getTasks();
+  listTasks.forEach(function(task, i) {
+    console.log('--------------------');
+    console.log(`Task #${i} : ${task}`);
+  });
 }
 
 module.exports = {
