@@ -8,7 +8,13 @@ let cmd = process.argv[2];
 let argv = yargs.help().argv;
 
 if (cmd === 'create') {
-  console.log('Todo item is created');
+  let item = createTask(argv.item);
+  if(item){
+    console.log(`ToDo: ${item} created`);
+    console.log('----------------------')
+  } else {
+    console.log(`Item not created, there's already a task with that name`);
+  }
 } else if (cmd === 'remove') {
   console.log('Todo item is removed');
 } else if (cmd === 'list') {
