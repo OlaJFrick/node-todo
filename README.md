@@ -1,19 +1,18 @@
 # H2 node-todo
 A simple node.js todo list (create, remove, list) using fs &amp; yargs.
 
--------------------------------------------------------
 
-# instructions
+# H3 instructions
 node app.js --help
 
-> create - add a todo task
+> create a todo item
 
-node app.js create -note="your todo task"
+node app.js create -note="your todo item"
 
-> remove - removes an existing task
+> remove an existing item
 
-node app.js remove -note="name of the task"
+node app.js remove -note="name of the item"
 
-> list - all todo tasks
+> list all todo items
 
 node app.js list
