@@ -3,7 +3,15 @@ const todos = require('./todos.js');
 const yargs = require('yargs');
 
 let cmd = process.argv[2];
-let argv = yargs.argv;
+let argv = yargs.
+  .command('create', 'create a todo task', {
+    todo: {
+      describe: 'An Todo item',
+      demand: true
+    }
+  })
+  .help()
+  .argv;
 
 if (cmd === 'create') {
   let item = createTask(argv.todo);
