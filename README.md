@@ -1,5 +1,5 @@
 # node-todo
-> A simple node.js todo list (create, remove, list) using fs &amp; yargs.
+> A illustrative command-line todo list app (create, remove, list) using Node.js (fs &amp; yargs).
 
 
 ## Instructions
